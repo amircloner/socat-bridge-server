@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  tcp-proxy-socat:
+    image: hpello/tcp-proxy:latest
+    restart: always
+    ports:
+      - ${INBOUND_PORT:-1000}:${OUTBOUND_PORT:-1000}
+    environment:
+      - LISTEN_PORT=${INBOUND_PORT:-1000}
+    command: "${OUTBOUND_HOST:-"1.1.1.1"} ${OUTBOUND_PORT:-1000}"
