@@ -6,10 +6,6 @@ from pathlib import Path
 
 path = Path(__file__).parent
 
-# envPath = str(path.joinpath('.env.example'))
-# envFile = open(envPath, 'r', encoding='utf-8')
-# env = envFile.read()
-
 # INPUT: OUTBOUND_HOST
 
 outbound_host = input("Server OUTBOUND_HOST:\n")

@@ -8,4 +8,4 @@ services:
       - ${INBOUND_PORT:-1000}:${OUTBOUND_PORT:-1000}
     environment:
       - LISTEN_PORT=${INBOUND_PORT:-1000}
-    command: "${OUTBOUND_HOST:-"1.1.1.1"} ${OUTBOUND_PORT:-1000}"
+    command: "${OUTBOUND_HOST} ${OUTBOUND_PORT}"
